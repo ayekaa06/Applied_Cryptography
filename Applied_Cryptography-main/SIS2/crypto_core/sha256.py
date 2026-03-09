@@ -1,6 +1,3 @@
-# sha256.py
-# NO IMPORTS - All implementations are custom
-
 class SHA256:
     def __init__(self):
         self.H = [
