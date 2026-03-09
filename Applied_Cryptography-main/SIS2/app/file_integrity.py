@@ -1,15 +1,6 @@
 from crypto_core.sha256 import SHA256
 # File and Directory Operations
 
-def file_exists(path):
-    """Check if file exists"""
-    try:
-        with open(path, 'rb') as f:
-            pass
-        return True
-    except:
-        return False
-
 def is_file(path):
     """Check if path is a file"""
     try:
