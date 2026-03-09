@@ -1,6 +1,14 @@
 from crypto_core.sha256 import SHA256
-import os
 # File and Directory Operations
+
+def file_exists(path):
+    """Check if file exists"""
+    try:
+        with open(path, 'rb') as f:
+            pass
+        return True
+    except:
+        return False
 
 def is_file(path):
     """Check if path is a file"""
@@ -46,7 +54,7 @@ def walk_directory(path):
     """Walk directory tree"""
     try:
         os_module = __import__('os')
-        for root, dirs, files in os.walk(path):
+        for root, dirs, files in os_module.walk(path):
             yield root, dirs, files
     except Exception as e:
         print(f"Error walking directory: {e}")
