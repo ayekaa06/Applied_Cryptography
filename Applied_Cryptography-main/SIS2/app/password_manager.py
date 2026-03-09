@@ -4,13 +4,13 @@ from utils.random import _urandom
 from crypto_core.sha256 import SHA256
 from crypto_core.hmac import hmac_sha256
 from crypto_core.pbkdf2 import pbkdf2
+import os
 
 
 def _makedirs(path):
     """Create directory"""
     try:
-        os_module = __import__('os')
-        os_module.makedirs(path, exist_ok=True)
+        os.makedirs(path, exist_ok=True)
     except Exception as e:
         print(f"Warning: Could not create directory {path}: {e}")
 

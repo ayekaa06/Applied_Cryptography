@@ -71,7 +71,6 @@ def test_hkdf():
 if __name__ == "__main__":
     print("Running cryptographic test vectors...\n")
     test_sha256()
-    print()
     test_hmac()
     test_pbkdf2()
     test_hkdf()
