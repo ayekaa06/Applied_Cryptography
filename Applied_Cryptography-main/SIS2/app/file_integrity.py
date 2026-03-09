@@ -1,4 +1,5 @@
 from crypto_core.sha256 import SHA256
+import os
 # File and Directory Operations
 
 def is_file(path):
@@ -45,7 +46,7 @@ def walk_directory(path):
     """Walk directory tree"""
     try:
         os_module = __import__('os')
-        for root, dirs, files in os_module.walk(path):
+        for root, dirs, files in os.walk(path):
             yield root, dirs, files
     except Exception as e:
         print(f"Error walking directory: {e}")
